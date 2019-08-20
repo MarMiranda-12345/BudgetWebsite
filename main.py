@@ -9,17 +9,17 @@ the_jinja_env = jinja2.Environment(
 
 class MainPageHandler(webapp2.requestHandler):
     def get(self):
-        result_template = the_jinja_env.get_template('template/index.html')
+        result_template = the_jinja_env.get_template('templates/index.html')
         self.response.write(result_template.render())
 
 class LogInPageHandler(webapp2.requesthandler):
     def get(self):
-        result_template = the_jinja_env.get_template('template/logInPage.html')
+        result_template = the_jinja_env.get_template('templates/logInPage.html')
         self.response.write(result_template.render())
 
 class SignUpPageHandler(webapp2.requesthandler):
     def get(self):
-        result_template = the_jinja_env.get_template('template/logInPage.html')
+        result_template = the_jinja_env.get_template('templates/logInPage.html')
         self.response.write(result_template.render())
         def post(self):
             form
