@@ -1,5 +1,3 @@
-
-=======
 import webapp2
 import jinja2
 import os
@@ -34,4 +32,3 @@ app = webapp2.WSGIApplication([
     ('/logInPage', LogInPageHandler),
     ('/signUpPage', SignUpPageHandler)
 ], debug = True)
->>>>>>> 05f813d455686d911db2bbd33518cd27a3c98942
