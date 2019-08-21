@@ -61,7 +61,7 @@ def post(self):
 class EnterInfoHandler (webapp2.RequestHandler):
         def get(self):
             enterInfoTemplate = the_jinja_env.get_template("templates/EnterInfo.html")
-            self.response.write(enterInfoTemplate.render())
+            self.response.writes(enterInfoTemplate.render())
 
 class SendInfoHandler (webapp2.RequestHandler):
         def get(self):
