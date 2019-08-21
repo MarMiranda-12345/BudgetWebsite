@@ -14,11 +14,20 @@ class MainPageHandler(webapp2.RequestHandler):
         result_template = the_jinja_env.get_template('templates/index.html')
         self.response.write(result_template.render())
 
+class LogInPageHandler(webapp2.RequestHandler):
+    def get(self):
+        result_template = the_jinja_env.get_template('templates/logInPage.html')
+        self.response.write(result_template.render())
+
+
+
+#this is not complete
+# everything below is supposed to be the data
 class SimpleBudgetUser(ndb.Model):
     first_name = ndb.StringProperty()
     last_name = ndb.StringProperty()
 
-class LogInSignUpPageHandler(webapp2.RequestHandler):
+class SignUpPageHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
         #if the user logged in
@@ -43,7 +52,29 @@ class LogInSignUpPageHandler(webapp2.RequestHandler):
         else:
             self.response.write('''
                 please log in to use our site! <br>
-                <a href="%s">Sign in</a>''' % (users.create_login_url('/budget')))
+                <a> href="%s">Sign in/a>''' % (user.create_login_url('/logInPage')))
+
+class SignUpPageHandler(webapp2.RequestHandler):
+    def post(self):
+        result_template = the_jinja_env.get_template('templates/SignUpPageHandler.html')
+        user_name = self.request.get('username')
+        Pass_Word = self.request.get('password')
+        new_dict = {
+        "username": user_name,
+        "password": pass_Word
+    }
+        self.response.write(result_template.render(new_dict))
+
+class EnterInfoHandler (webapp2.RequestHandler):
+        def get(self):
+            enterInfoTemplate = the_jinja_env.get_template("templates/EnterInfo.html")
+            self.response.write(enterInfoTemplate.render())
+
+class SendInfoHandler (webapp2.RequestHandler):
+        def get(self):
+            retrieveInfoTemplate = the_jinja_env.get_template("templates/EnterInfoResult.html")
+            self.response.write(retrieveInfoTemplate.render())
+
 
 def post(self):
     user = user.get_current_user()

@@ -30,8 +30,8 @@
 
 /* Style the active/current link*/
 .header a.active {
-  background-color: dodgerblue;
-  color: white;
+  background-color: blue;
+  color: green;
 }
 
 /* Float the link section to the right */
@@ -49,14 +49,4 @@
   .header-right {
     float: none;
   }
-}
-/* this is the end of the website header
-
-
-body{
-  background-color: #3dd9b4
-}
-
-#1{
-  background-color: white
 }
