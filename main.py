@@ -30,12 +30,12 @@ class SignUpPageHandler(webapp2.RequestHandler):
 
 class EnterInfoHandler (webapp2.RequestHandler):
         def get(self):
-            enterInfoTemplate = the_jinja_env.get_template("templates/welcome.html")
+            enterInfoTemplate = the_jinja_env.get_template("templates/EnterInfo.html")
             self.response.write(enterInfoTemplate.render())
 
 class SendInfoHandler (webapp2.RequestHandler):
         def get(self):
-            retrieveInfoTemplate = the_jinja_env.get_template("templates/result.html")
+            retrieveInfoTemplate = the_jinja_env.get_template("templates/EnterInfoResult.html")
             self.response.write(retrieveInfoTemplate.render())
 
 
@@ -43,5 +43,6 @@ app = webapp2.WSGIApplication([
     ('/', MainPageHandler),
     ('/logInPage', LogInPageHandler),
     ('/signUpPage', SignUpPageHandler),
+    ('/info', EnterInfoHandler),
     ('/budget', SendInfoHandler)
 ], debug = True)
