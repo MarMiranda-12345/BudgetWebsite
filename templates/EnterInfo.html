@@ -3,7 +3,14 @@
 <html>
 
       <head>
-
+        <div class="header">
+          <a href="index.html" class="logo">SimpleBudget</a>
+          <div class="header-right">
+            <!--<a class="active" href="#home"></a>-->
+            <a href="" class="">BudgetTips</a>
+            <a href="" class="">AboutUs</a>
+          </div>
+        </div>
           <link rel = "stylesheet" href = "/static/css/results.css">
           <link rel  = "script.js" href = "/static/JS/index.js">
       </head>
@@ -17,8 +24,9 @@
 
             <h2> Please Enter the Following: </h2>
 
-            <div id = "1">
+            <div id = 1 >
                       <h3> Income </h3>
+                      Whats your yearly income?
               <input type="text" name="Total Net Income">
             </div>
 
@@ -50,10 +58,7 @@
               <br>
               Other Expenses:
               <input type="text" name="Other Expenses">
-              <br>
-              <br>
-              Total spending amount:
-              <input   type="text" name="Total_1">
+
             </div>
             <div id = "3">
                       <h3> Medical Care </h3>
@@ -61,11 +66,13 @@
               <input type="text" name="Health Insurance">
               <br>
               <br>
-
+                How much do you spend on medication?
               <input type="text" name="Medical/Dental Expenses">
+              <br>
+              <br>
+              Other Expenses:
               <input type="text" name="Other Expenses">
 
-                <input type="text" name="Total_2">
             </div>
             <div id = "4">
                     <h3> Transportation </h3>
@@ -87,14 +94,9 @@
               <br>
               Other Expenses:
               <input type="text" name="Other Expenses">
-              <br>
-              <br>
-              Total spending amount:
+            </div>
 
-                  <input type="text" name="Total_3">
-                </div>
-                <div id = "5">
-
+            <div id = 5>
                       <h3> Education </h3>
                   How much do you spend on Tuition?
               <input type="text" name="Tuition/Fees">
@@ -106,13 +108,9 @@
               <br>
               Other Expenses:
               <input type="text" name="Other Expenses">
-              <br>
-              <br>
-              Total spending amount:
-
-                  <input type="text" name="Total_4">
             </div>
 
+            <div id = 6>
                 <h3> Loans and Credit Cards </h3>
                 Student Loans:
               <input type="text" name="Student_Loans">
@@ -124,36 +122,63 @@
               <br>
               Other Expenses:
               <input type="text" name="Other_Expenses">
-              <br>
-              <br>
-              Total spending amount:
+            </div>
 
-                  <input type="text" name="Total_5">
-
+            <div id = 7>
                 <h3> Savings/Investments </h3>
                 How much money is in your savings?
                 <input type="text" name="Savings">
+                <br>
+                <br>
                 How much are you investing?
                 <input type="text" name="Investments">
+                <br>
+                <br>
                 other Expenses:
                 <input type="text" name="Other Expenses">
-                <br>
+              </div>
 
-                  <input type="text" name="Total_6"
-
+              <div id = 8>
                     <h3> Miscellaneous </h3>
-                    How much do you spend on Entertainment?(Netflix,Spotify,HBO etc)
+                  How much do you spend on Entertainment?(Netflix,Spotify,HBO etc)
                 <input type="text" name="Entertainment">
-
+                <br>
+                <br>
+                How much do you spend on traveling?
                 <input type="text" name="Travel">
+                <br>
+                <br>
+                How much do you spend on clothing?
                 <input type="text" name="Clothing">
+                <br>
+                <br>
+                How much do you spend on your personal care?
                 <input type="text" name="Personal Care">
+                <br>
+                <br>
+                How much money do you use for Donations?
                 <input type="text" name="Donations">
+                <br>
+                <br>
+                How much do you spend on gifts?
                 <input type="text" name="Gifts">
+                <br>
+                <br>
+                Other Expenses?
                 <input type="text" name="Other Expenses">
+              </div>
 
-                <input type="text" name="Total_7">
-
+              <div id = 9>
+                    <h3> Summary</h3>
+                    Income:
+                  <input type = "text" name = "Total Net Income">
+                  <br>
+                  Total Expenses:
+                  <input type = "text" name = "Total Expenses">
+                  <br>
+                  Surplus:
+                  <input type = "text" name = "Surplus">
+              </div>
             </form>
 
         </body>
