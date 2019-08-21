@@ -4,7 +4,6 @@ import os
 from google.appengine.api import users
 from google.appengine.ext import ndb
 
-
 the_jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
@@ -30,17 +29,17 @@ class SimpleBudgetUser(ndb.Model):
 
 class SignUpPageHandler(webapp2.RequestHandler):
     def get(self):
-        user = user.get_current_user()
+        user = users.get_current_user()
         #if the user logged in
         if user:
             email_address = user.nickname()
             Simple_Budget_User = SimpleBudgetUser.get_by_id(user.user_id())
-            sign_link_html = '<a href="%s">signout</a>' % (
-                users.create_logout_url('/logInPage'))
+            signout_link_html = '<a href="%s">signout</a>' % (
+                users.create_logout_url('/'))
         #if the user has previously been to our site
             if Simple_Budget_User:
-                self.response.write('''Welccome %s %s (%s)! <br> %s <br>''' % (SimpleBudgetUser.first_name, SimpleBudgetUser.last_name, email_address, signout_link_html))
-            #if the user hasnt bee to our site
+                self.response.write('''Welccome %s %s (%s)! <br> %s <br>''' % (Simple_Budget_User.first_name, Simple_Budget_User.last_name, email_address, signout_link_html))
+            #if the user hasnt been to our site
             else:
                 self.response.write('''Welcome to our site, %s! Please sign up! <br>
                 <form method ="post"action="/">
@@ -88,12 +87,22 @@ def post(self):
         id=user.user_id())
     Simple_Budget_User.put()
     self.response.write('Thanks for signing up, %s!' %
-        Simple_Budget_User.first_name)
+        (Simple_Budget_User.first_name))
+
+class EnterInfoHandler (webapp2.RequestHandler):
+        def get(self):
+            enterInfoTemplate = the_jinja_env.get_template("templates/EnterInfo.html")
+            self.response.writes(enterInfoTemplate.render())
+
+class SendInfoHandler (webapp2.RequestHandler):
+        def get(self):
+            retrieveInfoTemplate = the_jinja_env.get_template("templates/EnterInfoResult.html")
+            self.response.write(retrieveInfoTemplate.render())
+>>>>>>> 7cd2fd9e3580a81c0654a53ea892a59bad4f2041
 
 app = webapp2.WSGIApplication([
     ('/', MainPageHandler),
-    ('/logInPage', LogInPageHandler),
-    ('/signUpPage', SignUpPageHandler),
+    ('/logInSignUpPage', LogInSignUpPageHandler),
     ('/info', EnterInfoHandler),
     ('/budget', SendInfoHandler)
 ], debug = True)
