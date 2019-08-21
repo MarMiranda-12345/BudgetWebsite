@@ -10,16 +10,17 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class MainPageHandler(webapp2.requestHandler):
+class MainPageHandler(webapp2.RequestHandler):
     def get(self):
         result_template = the_jinja_env.get_template('templates/index.html')
         self.response.write(result_template.render())
 
-class LogInPageHandler(webapp2.requesthandler):
+class LogInPageHandler(webapp2.RequestHandler):
     def get(self):
         result_template = the_jinja_env.get_template('templates/logInPage.html')
         self.response.write(result_template.render())
 
+<<<<<<< HEAD
 
 #this is not complete
 # everything below is supposed to be the data
@@ -53,6 +54,28 @@ class SignUpPageHandler(webapp2.requesthandler):
             self.response.write('''
                 please log in to use our site! <br>
                 <a> href="%s">Sign in/a>''' % (user.create_login_url('/logInPage')))
+=======
+class SignUpPageHandler(webapp2.RequestHandler):
+    def post(self):
+        result_template = the_jinja_env.get_template('templates/SignUpPageHandler.html')
+        user_name = self.request.get('username')
+        Pass_Word = self.request.get('password')
+        new_dict = {
+        "username": user_name,
+        "password": pass_Word
+    }
+        self.response.write(result_template.render(new_dict))
+
+class EnterInfoHandler (webapp2.RequestHandler):
+        def get(self):
+            enterInfoTemplate = the_jinja_env.get_template("templates/EnterInfo.html")
+            self.response.write(enterInfoTemplate.render())
+
+class SendInfoHandler (webapp2.RequestHandler):
+        def get(self):
+            retrieveInfoTemplate = the_jinja_env.get_template("templates/EnterInfoResult.html")
+            self.response.write(retrieveInfoTemplate.render())
+>>>>>>> 7cd2fd9e3580a81c0654a53ea892a59bad4f2041
 
 def post(self):
     user = user.get_current_user()
@@ -70,5 +93,7 @@ def post(self):
 app = webapp2.WSGIApplication([
     ('/', MainPageHandler),
     ('/logInPage', LogInPageHandler),
-    ('/signUpPage', SignUpPageHandler)
+    ('/signUpPage', SignUpPageHandler),
+    ('/info', EnterInfoHandler),
+    ('/budget', SendInfoHandler)
 ], debug = True)
