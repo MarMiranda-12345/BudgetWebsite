@@ -54,3 +54,10 @@ body {
     float: none;
   }
 }
+
+h3 {
+  padding: 16px;
+  border: 1px solid purple;
+  border-radius: 10px;
+  background-color: 
+}
