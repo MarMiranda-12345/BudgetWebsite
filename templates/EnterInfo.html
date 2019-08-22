@@ -3,6 +3,17 @@
 <html>
 
       <head>
+        <div class="header">
+          <a href="index.html" class="logo">SimpleBudget</a>
+          <div class="header-right">
+            <!--<a class="active" href="#home"></a>-->
+            <a href="" class="">BudgetTips</a>
+            <a href="" class="">AboutUs</a>
+          </div>
+        </div>
+          <link rel = "stylesheet" href = "/static/css/results.css">
+
+
         <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         <script>
@@ -13,7 +24,7 @@
                   });
                 $("#Expenses").on("input", function(){
                   // Print entered value in a div box
-                  $("#TotExp").text($(this).val());
+                    $("#TotExp").text($(this).val());
                   });
                 $("#line1").on("input", function(){
                   // Print entered value in a div box
@@ -21,18 +32,18 @@
                 });
           });
 
+
+          $(document).on("change", ".qty1", function() {
+                  var sum = 0;
+              $(".qty1").each(function(){
+                  sum += +$(this).val();
+                });
+                  $(".TotExp").val(sum);
+            });
+
         </script>
 
 
-        <div class="header">
-          <a href="index.html" class="logo">SimpleBudget</a>
-          <div class="header-right">
-            <!--<a class="active" href="#home"></a>-->
-            <a href="" class="">BudgetTips</a>
-            <a href="" class="">AboutUs</a>
-          </div>
-        </div>
-          <link rel = "stylesheet" href = "/static/css/results.css">
 
       </head>
 
@@ -45,180 +56,165 @@
 
             <h2> Please Enter the Following: </h2>
 
-            <div id="Income" >
+            <div>
 
                       <h3> Income </h3>
                       Whats your yearly income?
-              <input type="text" name="Total Net Income">
+              <input type="text" placeholder="TypeSomething Here..." id="Income">
+
 
             </div>
 
-<<<<<<< HEAD
             <div id="Expenses">
 
-=======
-            <div id = 2>
->>>>>>> 3335e42e975cdc5cbdc838197356c81df2c0e4b9
               <h3> Housing and Living Expenses </h3>
               What are your rent/mortage charges?
-              <input type="text" name="Mortage/Rent">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               How much do you pay for Homeowners Insurance?
-              <input type="text" name="Homeowners Insurance">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               How much do you pay for Property Taxes monthly?
-              <input  type="text" name="Property Taxes">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               How much do you pay for utilities?
-              <input  type="text" name="Utilities">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               How much do you pay for Groceries weekly?
-              <input type="text" name="Groceries">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               How much do you spend on your kids/pets weekly?
-              <input type="text" name="Child Care">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               Other Expenses:
-              <input type="text" name="Other Expenses">
-<<<<<<< HEAD
-
-
-=======
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
-              Total spending amount:
-              <div  id="Total_1"></div>
-              <input id="houseSubmit" type="button" value="submit"></input>
-            </div>
-            <div id = 3>
->>>>>>> 3335e42e975cdc5cbdc838197356c81df2c0e4b9
+
+
+
                       <h3> Medical Care </h3>
               How much do you pay for Health Insurance?
-              <input type="text" name="Health Insurance">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
                 How much do you spend on medication?
-              <input type="text" name="Medical/Dental Expenses">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               Other Expenses:
-              <input type="text" name="Other Expenses">
-
-<<<<<<< HEAD
+              <input type="text" class="qty1" value="" />
 
 
-=======
-            </div>
-            <div id = 4>
->>>>>>> 3335e42e975cdc5cbdc838197356c81df2c0e4b9
                     <h3> Transportation </h3>
                   How much is your car payment?
-              <input type="text" name="Vehicle Payment">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               How much do you spend on Public Transportation?
-              <input type="text" name="Public Transportation">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               How much do you pay for gas?
-              <input type="text" name="Gas">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               How much do you pay for Auto Insurance?
-              <input type="text" name="Auto Insurance">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               Other Expenses:
-              <input type="text" name="Other Expenses">
+              <input type="text" class="qty1" value="" />
 
 
                       <h3> Education </h3>
                   How much do you spend on Tuition?
-              <input type="text" name="Tuition/Fees">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               What are your text book fees?
-              <input type="text" name="Textbooks">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               Other Expenses:
-              <input type="text" name="Other Expenses">
+              <input type="text" class="qty1" value="" />
 
 
                 <h3> Loans and Credit Cards </h3>
                 Student Loans:
-              <input type="text" name="Student_Loans">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               Credit Card Payment:
-              <input type="text" name="Credit_Card Payment">
+              <input type="text" class="qty1" value="" />
               <br>
               <br>
               Other Expenses:
-              <input type="text" name="Other_Expenses">
+              <input type="text" class="qty1" value="" />
 
 
 
                 <h3> Savings/Investments </h3>
                 How much money is in your savings?
-                <input type="text" name="Savings">
+                <input type="text" class="qty1" value="" />
                 <br>
                 <br>
                 How much are you investing?
-                <input type="text" name="Investments">
+                <input type="text" class="qty1" value="" />
                 <br>
                 <br>
-                other Expenses:
-                <input type="text" name="Other Expenses">
+                Other Expenses:
+                <input type="text" class="qty1" value="" />
 
 
                     <h3> Miscellaneous </h3>
                   How much do you spend on Entertainment?(Netflix,Spotify,HBO etc)
-                <input type="text" name="Entertainment">
+                <input type="text" class="qty1" value="" />
                 <br>
                 <br>
                 How much do you spend on traveling?
-                <input type="text" name="Travel">
+                <input type="text" class="qty1" value="" />
                 <br>
                 <br>
                 How much do you spend on clothing?
-                <input type="text" name="Clothing">
+            ``  <input type="text" class="qty1" value="" />
                 <br>
                 <br>
                 How much do you spend on your personal care?
-                <input type="text" name="Personal Care">
+                <input type="text" class="qty1" value="" />
                 <br>
                 <br>      </div>
                 How much money do you use for Donations?
-                <input type="text" name="Donations">
+                <input type="text" class="qty1" value="" />
                 <br>
                 <br>
                 How much do you spend on gifts?
-                <input type="text" name="Gifts">
+                <input type="text" class="qty1" value="" />
                 <br>
                 <br>
                 Other Expenses?
-                <input type="text" name="Other Expenses">
+                <input type="text" class="qty1" value="" />
 
               </div>
 
               <div>
-                    <h3> Summary</h3>
-                    Income:
-                  <input id="TotalInc" type = "text" name = "Total Net Income">
-                  <br>
-                  Total Expenses:
-                  <input id= "TotExp" type = "text" name = "Total Expenses">
-                  <br>
-                  Surplus:
-                  <input id= "TotSurplus" type = "text" name = "Surplus">
+                            <h3> Summary</h3>
 
+                                Income:
+                  <div id="TotalInc"></div>
+                  <br>
+                            Total Expenses:
+                <input class= "TotExp" type = "text" name = "Total Expenses">
+                  <br>
+                                Surplus:
+                <input id= "TotSurplus" type = "text" name = "Surplus">
+                  <!-->
               </div>
 
             </form>
