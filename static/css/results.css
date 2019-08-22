@@ -1,5 +1,5 @@
 body {
-  background-color: #47ffaf
+  background-color: #75acd1
 }
 
 .header {
@@ -55,9 +55,9 @@ body {
   }
 }
 
-h3 {
+input {
   padding: 16px;
-  border: 1px solid purple;
+  border: 1px solid Blue;
   border-radius: 10px;
-  background-color: 
+  background-color:
 }
