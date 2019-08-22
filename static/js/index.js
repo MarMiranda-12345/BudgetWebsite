@@ -9,19 +9,6 @@ function Income (NetIncome,Total)
   return Total_1;
 }
 
-houseDiv = document.querySelector("#2");
-
-inputs = houseDiv.querySelectorAll('input[type="text"]');
-
-if(houseDiv == undefined)
-
-subBut = houseDiv.querySelector("#houseSubmit");
-subBut.addEventListener('click', () => {
-total = housingTotal(inputs[0].value, inputs[1].value, inputs[2].value, inputs[3].value, inputs[4].value, inputs[5].value, inputs[6].value)
-  console.log("Total housing expenses: ");
-});
-
-
 function Housing (Mort,HomeIns,Tax,Util,Grocery,Child,Other,Total)
 {
 
