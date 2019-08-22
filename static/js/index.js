@@ -17,7 +17,7 @@ if(houseDiv == undefined)
 
 subBut = houseDiv.querySelector("#houseSubmit");
 subBut.addEventListener('click', () => {
-  //total = housingTotal(inputs[0].value, inputs[1].value, inputs[2].value, inputs[3].value, inputs[4].value, inputs[5].value, inputs[6].value)
+total = housingTotal(inputs[0].value, inputs[1].value, inputs[2].value, inputs[3].value, inputs[4].value, inputs[5].value, inputs[6].value)
   console.log("Total housing expenses: ");
 });
 
