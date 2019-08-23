@@ -1,6 +1,6 @@
 body {
   background-color: #75acd1;
-  font-size: 26px;
+  font-size: 20px;
   color: black
 }
 h1{
@@ -68,9 +68,54 @@ input {
   border-radius: 20px;
   background-color:#b4ebed
 }
-div.2{
+
+.class9{
   padding: 5px;
-  border: 1px solid Blue;
+  border: 1px solid #9bf8fa;
   border-radius: 20px;
-  background-color:#b4ebed
+  background-color:#d8e8f2
+}
+.class8{
+  padding: 5px;
+  border: 1px solid #9bf8fa;
+  border-radius: 20px;
+  background-color:#d8e8f2
+}
+.class7{
+  padding: 5px;
+  border: 1px solid #9bf8fa;
+  border-radius: 20px;
+  background-color:#d8e8f2
+}
+.class6{
+  padding: 5px;
+  border: 1px solid #9bf8fa;
+  border-radius: 20px;
+  background-color:#d8e8f2
+}
+.class5{
+  padding: 5px;
+  border: 1px solid #9bf8fa;
+  border-radius: 20px;
+  background-color:#d8e8f2
+}
+.class4{
+  padding: 5px;
+  border: 1px solid #9bf8fa;
+  border-radius: 20px;
+  background-color:#d8e8f2
+  
+}
+.class3{
+  padding: 5px;
+  border: 1px solid #9bf8fa;
+  border-radius: 20px;
+  background-color:#d8e8f2
+}
+.class1{
+  padding: 5px;
+  border: 1px solid #9bf8fa;
+  border-radius: 20px;
+  background-color:#d8e8f2;
+  text-align: left
 }
