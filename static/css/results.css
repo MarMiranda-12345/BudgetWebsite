@@ -71,94 +71,103 @@ input {
 
 .class9{
   padding: 5px;
-  border: 3px solid Green;
+  border: 3px solid silver;
   border-radius: 20px;
   background-color:#d8e8f2;
   text-align: left;
   width: 615px;
   position: relative;
   left: 700px;
-  bottom:863px
+  bottom:863px;
+  border-style: outset;
+
 }
 .class8{
   padding: 5px;
-  border: 3px solid #9c64f5;
+  border: 3px solid silver;
   border-radius: 20px;
   background-color:#d8e8f2;
   width: 615px;
   position:relative;
-  bottom: 430px
+  bottom: 430px;
+  border-style: outset;
 }
 .class7{
   padding: 5px;
-  border: 3px solid #9c64f5;
+  border: 3px solid silver;
   border-radius: 20px;
   background-color:#d8e8f2;
   text-align: left;
   width: 615px;
   position: relative;
   left: 700px;
-  bottom: 510px
+  bottom: 510px;
+  border-style: outset;
 }
 .class6{
   padding: 5px;
-  border: 3px solid #9c64f5;
+  border: 3px solid silver;
   border-radius: 20px;
   background-color:#d8e8f2;
   width: 470px;
   position:relative;
-  bottom: 300px
+  bottom: 300px;
+  border-style: outset;
 }
 .class5{
   padding: 5px;
-  border: 3px solid #9c64f5;
+  border: 3px solid silver;
   border-radius: 20px;
   background-color:#d8e8f2;
   text-align: left;
   width: 615px;
   position:relative;
   left:700px;
-  bottom: 459px
+  bottom: 459px;
+  border-style: outset;
 }
 .class4{
   padding: 5px;
-  border: 3px solid #9c64f5;
+  border: 3px solid silver;
   border-radius: 20px;
   background-color:#d8e8f2;
   width: 615px;
   position: relative;
-  bottom: 150px
-
+  bottom: 150px;
+  border-style: outset;
 }
 .class3{
   padding: 5px;
-  border: 3px solid #9c64f5;
+  border: 3px solid silver;
   border-radius: 20px;
   background-color:#d8e8f2;
   text-align: left;
   width: 615px;
   position: relative;
   left:700px;
-  bottom:413px
+  bottom:413px;
+  border-style: outset;
 }
 .class1{
   padding: 5px;
-  border: 3px solid #9c64f5;
+  border: 3px solid silver;
   border-radius: 20px;
   background-color:#d8e8f2;
   width: 615px;
   height:400px;
+  border-style: outset;
 }
 h3{
   text-decoration: underline;
 }
 .Income{
   padding: 5px;
-  border: 3px solid #9c64f5;
+  border: 3px solid silver;
   border-radius: 20px;
   background-color:#d8e8f2;
   width: 451px;
   height:100px;
   position: relative;
-  bottom: 13px
+  bottom: 13px;
+  border-style: outset;
 }
