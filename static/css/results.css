@@ -71,51 +71,90 @@ input {
 
 .class9{
   padding: 5px;
-  border: 1px solid #9bf8fa;
+  border: 3px solid Green;
   border-radius: 20px;
-  background-color:#d8e8f2
+  background-color:#d8e8f2;
+  text-align: left;
+  width: 615px;
+  position: relative;
+  left: 700px;
+  bottom:863px
 }
 .class8{
   padding: 5px;
-  border: 1px solid #9bf8fa;
+  border: 1px solid #9c64f5;
   border-radius: 20px;
-  background-color:#d8e8f2
+  background-color:#d8e8f2;
+  width: 615px;
+  position:relative;
+  bottom: 430px
 }
 .class7{
   padding: 5px;
-  border: 1px solid #9bf8fa;
+  border: 1px solid #9c64f5;
   border-radius: 20px;
-  background-color:#d8e8f2
+  background-color:#d8e8f2;
+  text-align: left;
+  width: 615px;
+  position: relative;
+  left: 700px;
+  bottom: 510px
 }
 .class6{
   padding: 5px;
-  border: 1px solid #9bf8fa;
+  border: 1px solid #9c64f5;
   border-radius: 20px;
-  background-color:#d8e8f2
+  background-color:#d8e8f2;
+  width: 470px;
+  position:relative;
+  bottom: 300px
 }
 .class5{
   padding: 5px;
-  border: 1px solid #9bf8fa;
+  border: 1px solid #9c64f5;
   border-radius: 20px;
-  background-color:#d8e8f2
+  background-color:#d8e8f2;
+  text-align: left;
+  width: 615px;
+  position:relative;
+  left:700px;
+  bottom: 459px
 }
 .class4{
   padding: 5px;
-  border: 1px solid #9bf8fa;
+  border: 1px solid #9c64f5;
   border-radius: 20px;
-  background-color:#d8e8f2
-  
+  background-color:#d8e8f2;
+  width: 615px;
+  position: relative;
+  bottom: 150px
+
 }
 .class3{
   padding: 5px;
-  border: 1px solid #9bf8fa;
+  border: 1px solid #9c64f5;
   border-radius: 20px;
-  background-color:#d8e8f2
+  background-color:#d8e8f2;
+  text-align: left;
+  width: 615px;
+  position: relative;
+  left:700px;
+  bottom:413px
 }
 .class1{
   padding: 5px;
-  border: 1px solid #9bf8fa;
+  border: 1px solid #9c64f5;
   border-radius: 20px;
   background-color:#d8e8f2;
-  text-align: left
+  width: 615px;
+  height:400px;
+}
+h3{
+  text-decoration: underline;
+}
+.Income{
+  padding: 5px;
+  border: 1px solid #9c64f5;
+  border-radius: 20px;
+  background-color:#d8e8f2;
 }
