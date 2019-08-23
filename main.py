@@ -81,9 +81,15 @@ class SendInfoHandler (webapp2.RequestHandler):
             retrieveInfoTemplate = the_jinja_env.get_template("templates/EnterInfoResult.html")
             self.response.write(retrieveInfoTemplate.render())
 
+class AboutInfoHandler (webapp2.RequestHandler):
+        def get(self):
+            AboutInfoTemplate = the_jinja_env.get_template ("templates/AboutUs.html")
+            self.response.write(AboutInfoTemplate.render())
+
 app = webapp2.WSGIApplication([
     ('/', MainPageHandler),
     ('/logInSignUpPage', LogInSignUpPageHandler),
     ('/info', EnterInfoHandler),
-    ('/budget', SendInfoHandler)
+    ('/budget', SendInfoHandler),
+    ('/about',AboutInfoHandler)
 ], debug = True)
