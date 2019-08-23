@@ -52,4 +52,8 @@
     float: none;
   }
 }
-/* this is the end of the website header
+/* this is the end of the website header*/
+hello{
+  text-align: center;
+  diplay: inline-block
+}
