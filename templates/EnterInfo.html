@@ -33,20 +33,19 @@
 
         </script>
 
-
+</head>
 
         <div class="header">
           <a href='/' class="logo">Home</a>
           <div class="header-right">
             <!--<a class="active" href="#home"></a>-->
             <a href="" class="">BudgetTips</a>
-            <a href="" class="">AboutUs</a>
+            <a href="/about" class="">AboutUs</a>
           </div>
         </div>
           <link rel = "stylesheet" href = "/static/css/results.css">
 
 
-      </head>
 
 
       <body>
@@ -100,10 +99,10 @@
               <input type="text" class="qty1" value="" />
               <br>
               <br>
+            </div>
 
 
-
-
+<div id = 3>
 
 
                       <h3> Medical Care </h3>
@@ -119,7 +118,7 @@
 
               <input type="text" class="qty1" value="" />
 
-
+</div>
 
 
             <div id = 4>
@@ -144,7 +143,7 @@
               Other Expenses:
               <input type="text" class="qty1" value="" />
 
-
+<div id=5>
                       <h3> Education </h3>
                   How much do you spend on Tuition?
               <input type="text" class="qty1" value="" />
@@ -157,7 +156,8 @@
               Other Expenses:
               <input type="text" class="qty1" value="" />
 
-
+</div>
+<div id=6>
                 <h3> Loans and Credit Cards </h3>
                 Student Loans:
               <input type="text" class="qty1" value="" />
@@ -169,8 +169,8 @@
               <br>
               Other Expenses:
               <input type="text" class="qty1" value="" />
-
-
+</div>
+<div id=7>
 
                 <h3> Savings/Investments </h3>
                 How much money is in your savings?
@@ -183,8 +183,8 @@
                 <br>
                 Other Expenses:
                 <input type="text" class="qty1" value="" />
-
-
+</div>
+<div id=8>
                     <h3> Miscellaneous </h3>
                   How much do you spend on Entertainment?(Netflix,Spotify,HBO etc)
                 <input type="text" class="qty1" value="" />
@@ -201,7 +201,7 @@
                 How much do you spend on your personal care?
                 <input type="text" class="qty1" value="" />
                 <br>
-                <br>      </div>
+                <br>
                 How much money do you use for Donations?
                 <input type="text" class="qty1" value="" />
                 <br>
@@ -213,9 +213,9 @@
                 Other Expenses:
                 <input type="text" class="qty1" value="" />
 
-              </div>
+</div>
 
-              <div>
+      <div id= 9>
                             <h3> Summary</h3>
 
                                 Income:
@@ -229,6 +229,37 @@
             </form>
 
             <script src="/static/js/index.js"></script>
+
+<!--This is the pie chart -->
+
+<div id="piechart"></div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Housing and Living Expenses', ],
+          ['Medical Care', ],
+          ['Transportation', ],
+          ['Loans/Investments', ],
+          ['Miscellaneous', ]
+        ]);
+
+          // Optional; add a title and set the width and height of the chart
+          var options = {'title':'Pie Graph', 'width':550, 'height':400};
+
+          // Display the chart inside the <div> element with id="piechart"
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+          chart.draw(data, options);
+        }
+    </script>
         </body>
 
 
