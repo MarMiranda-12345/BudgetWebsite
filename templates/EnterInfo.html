@@ -2,11 +2,12 @@
 
 <html>
 
-      <head>
+    <head>
 
         <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type= "text/javascript">
 
-        <script>
+
             $(document).ready(function(){
                 $("#Income").on("input", function(){
                     // Print entered value in a div box
@@ -31,32 +32,65 @@
                   $(".TotExp").val(sum);
             });
 
-        </script>
+            window.onload function() {
+              var = chart {
+                animationenabled: "true"
+                title: {
+                  text: "Your Expenses"
+                        }
+
+                        data : [{
+                            type: "pie",
+                            startAngle: 45,
+                            indexLabel: "{label} ({y})",
+                              dataPoints: [
+
+                                {label: "Housing/Living", y="10"},
+                                {label: "Medical", y="11"},
+                                {label: "Transportation", y="8"},
+                                {label: "Education", y="5"},
+                                {label: "Loans/Credit Cards", y="3"},
+                                {label: "Miscellaneous", y="15"}
+
+                                          ]
+
+                              }]
+              };
+
+$("#BudgetChart").CanvasJS(chart);
+
+}
+</script>
 
 </head>
 
-        <div class="header">
-          <a href='/' class="logo">Home</a>
-          <div class="header-right">
+  <div class="header">
+        <a href='/' class="logo">Home</a>
+      <div class="header-right">
             <!--<a class="active" href="#home"></a>-->
             <a href="" class="">BudgetTips</a>
             <a href="/about" class="">AboutUs</a>
-          </div>
-        </div>
+      </div>
+  </div>
           <link rel = "stylesheet" href = "/static/css/results.css">
 
 
 
 
-      <body>
+    <body>
+
+
+      <div id="BudgetChart" style="height: 400px; width: 100%;"></div>
+      <script type="text/javascript" src="https://canvas.js/assets/script/jquery-1.11.1.min.js"></script>
+      <script type="text/javascript" src="https://canvas.js/assets/script/jquery.canvas.js.min.js"></script>
 
           <h1> Making Your Life Easy One Step at a Time! </h1>
 
-          <form method="post" action="/budget">
+                <form method="post" action="/budget">
 
-            <h2> Please Enter the Following: </h2>
+                  <h2> Please Enter the Following: </h2>
 
-            <div>
+            <div class="Income">
 
                       <h3> Income </h3>
                       Whats your yearly income?
@@ -68,7 +102,6 @@
             <div id="Expenses">
 
 
-            <div class = "class1">
 
               <h3> Housing and Living Expenses </h3>
               What are your rent/mortgage charges?
@@ -99,10 +132,8 @@
               <input type="text" class="qty1" value="" />
               <br>
               <br>
-            </div>
 
 
-<div class = "class3">
 
 
                       <h3> Medical Care </h3>
@@ -118,10 +149,10 @@
 
               <input type="text" class="qty1" value="" />
 
-</div>
 
 
-            <div class = "class4">
+
+
 
                     <h3> Transportation </h3>
                   How much is your car payment?
@@ -142,8 +173,8 @@
               <br>
               Other Expenses:
               <input type="text" class="qty1" value="" />
-</div>
-<div class="class5">
+
+
                       <h3> Education </h3>
                   How much do you spend on Tuition?
               <input type="text" class="qty1" value="" />
@@ -156,8 +187,7 @@
               Other Expenses:
               <input type="text" class="qty1" value="" />
 
-</div>
-<div class="class6">
+
                 <h3> Loans and Credit Cards </h3>
                 Student Loans:
               <input type="text" class="qty1" value="" />
@@ -169,8 +199,7 @@
               <br>
               Other Expenses:
               <input type="text" class="qty1" value="" />
-</div>
-<div class ="class7">
+
 
                 <h3> Savings/Investments </h3>
                 How much money is in your savings?
@@ -183,8 +212,8 @@
                 <br>
                 Other Expenses:
                 <input type="text" class="qty1" value="" />
-</div>
-<div class="class8">
+
+
                     <h3> Miscellaneous </h3>
                   How much do you spend on Entertainment?(Netflix,Spotify,HBO etc)
                 <input type="text" class="qty1" value="" />
@@ -213,13 +242,13 @@
                 Other Expenses:
                 <input type="text" class="qty1" value="" />
 
-</div>
+          </div>
 
-      <div class= "class9">
+
                             <h3> Summary</h3>
 
                                 Income:
-                  <div id="TotalInc"></div>
+              <div id="TotalInc"></div>
                   <br>
                             Total Expenses:
                 <input class= "TotExp" type = "text" name = "Total Expenses">
@@ -231,35 +260,11 @@
             <script src="/static/js/index.js"></script>
 
 <!--This is the pie chart -->
+<div id="BudgetChart" style="height: 400px; width: 100%;"></div>
+<script type="text/javascript" src="https://canvas.js/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://canvas.js/assets/script/jquery.canvas.js.min.js"></script>
 
-<div id="piechart"></div>
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-    <script type="text/javascript">
-        // Load google charts
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        // Draw the chart and set the chart values
-        function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Housing and Living Expenses', ],
-          ['Medical Care', ],
-          ['Transportation', ],
-          ['Loans/Investments', ],
-          ['Miscellaneous', ]
-        ]);
-
-          // Optional; add a title and set the width and height of the chart
-          var options = {'title':'Pie Graph', 'width':550, 'height':400};
-
-          // Display the chart inside the <div> element with id="piechart"
-          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-          chart.draw(data, options);
-        }
-    </script>
         </body>
 
 
