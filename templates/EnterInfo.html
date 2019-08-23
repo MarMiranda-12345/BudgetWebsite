@@ -32,34 +32,8 @@
                   $(".TotExp").val(sum);
             });
 
-            window.onload function() {
-              var = chart {
-                animationenabled: "true"
-                title: {
-                  text: "Your Expenses"
-                        }
 
-                        data : [{
-                            type: "pie",
-                            startAngle: 45,
-                            indexLabel: "{label} ({y})",
-                              dataPoints: [
 
-                                {label: "Housing/Living", y="10"},
-                                {label: "Medical", y="11"},
-                                {label: "Transportation", y="8"},
-                                {label: "Education", y="5"},
-                                {label: "Loans/Credit Cards", y="3"},
-                                {label: "Miscellaneous", y="15"}
-
-                                          ]
-
-                              }]
-              };
-
-$("#BudgetChart").CanvasJS(chart);
-
-}
 </script>
 
 </head>
@@ -102,7 +76,7 @@ $("#BudgetChart").CanvasJS(chart);
             <div id="Expenses">
 
 
-
+<div class = "class1">
               <h3> Housing and Living Expenses </h3>
               What are your rent/mortgage charges?
               <input type="text" class="qty1" value="" />
@@ -130,12 +104,8 @@ $("#BudgetChart").CanvasJS(chart);
               <br>
               Other Expenses:
               <input type="text" class="qty1" value="" />
-              <br>
-              <br>
-
-
-
-
+</div>
+<div class = "class3">
                       <h3> Medical Care </h3>
               How much do you pay for Health Insurance?
               <input type="text" class="qty1" value="" />
@@ -148,12 +118,8 @@ $("#BudgetChart").CanvasJS(chart);
               Other Expenses:
 
               <input type="text" class="qty1" value="" />
-
-
-
-
-
-
+</div>
+<div class = "class4">
                     <h3> Transportation </h3>
                   How much is your car payment?
               <input type="text" class="qty1" value="" />
@@ -173,8 +139,8 @@ $("#BudgetChart").CanvasJS(chart);
               <br>
               Other Expenses:
               <input type="text" class="qty1" value="" />
-
-
+</div>
+<div class = "class5">
                       <h3> Education </h3>
                   How much do you spend on Tuition?
               <input type="text" class="qty1" value="" />
@@ -186,8 +152,8 @@ $("#BudgetChart").CanvasJS(chart);
               <br>
               Other Expenses:
               <input type="text" class="qty1" value="" />
-
-
+</div>
+<div class = "class6">
                 <h3> Loans and Credit Cards </h3>
                 Student Loans:
               <input type="text" class="qty1" value="" />
@@ -199,8 +165,8 @@ $("#BudgetChart").CanvasJS(chart);
               <br>
               Other Expenses:
               <input type="text" class="qty1" value="" />
-
-
+</div>
+<div class = "class7">
                 <h3> Savings/Investments </h3>
                 How much money is in your savings?
                 <input type="text" class="qty1" value="" />
@@ -212,8 +178,8 @@ $("#BudgetChart").CanvasJS(chart);
                 <br>
                 Other Expenses:
                 <input type="text" class="qty1" value="" />
-
-
+</div>
+<div class="class8">
                     <h3> Miscellaneous </h3>
                   How much do you spend on Entertainment?(Netflix,Spotify,HBO etc)
                 <input type="text" class="qty1" value="" />
@@ -244,7 +210,7 @@ $("#BudgetChart").CanvasJS(chart);
 
           </div>
 
-
+<div class = "class9">
                             <h3> Summary</h3>
 
                                 Income:
@@ -259,10 +225,6 @@ $("#BudgetChart").CanvasJS(chart);
 
             <script src="/static/js/index.js"></script>
 
-<!--This is the pie chart -->
-<div id="BudgetChart" style="height: 400px; width: 100%;"></div>
-<script type="text/javascript" src="https://canvas.js/assets/script/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="https://canvas.js/assets/script/jquery.canvas.js.min.js"></script>
 
 
         </body>
